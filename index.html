@@ -32,6 +32,14 @@
 
     main { max-width: 640px; }
 
+    .hero-logo {
+      display: block;
+      width: 200px;
+      height: 200px;
+      margin: 0 auto 24px;
+      object-fit: contain;
+    }
+
     .brand {
       margin: 0 0 18px;
       color: var(--green);
@@ -71,6 +79,10 @@
 </head>
 <body>
   <main>
+    <picture>
+      <source srcset="reinicio-3-dias/assets/logo-hero.webp" type="image/webp">
+      <img class="hero-logo" src="reinicio-3-dias/assets/logo-hero.jpg" width="200" height="200" alt="Aprendo Viviendo Logo" fetchpriority="high" loading="eager">
+    </picture>
     <p class="brand">Aprendo Viviendo</p>
     <h1>Bienvenido a Aprendo Viviendo</h1>
     <p class="welcome">Un espacio para aprender, cuidarte y vivir mejor.</p>
