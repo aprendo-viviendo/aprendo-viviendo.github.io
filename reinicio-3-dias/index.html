@@ -1,0 +1,432 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fefefe">
+  <meta name="description" content="Una guía gratuita para perder grasa abdominal después de los 50, sin inyecciones, pasar hambre ni vivir en el gimnasio.">
+  <meta name="robots" content="noindex, nofollow">
+  <title>Tu guía gratuita | Aprendo Viviendo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      color-scheme: light;
+      
+      /* Brand Colors */
+      --paper: #fefefe;
+      --ink: #323b1f;       /* V Logo Color */
+      --muted: #6b7264;
+      --green: #668541;     /* Main Swirl Green */
+      --brown: #bb8f60;     /* Main Swirl Brown */
+      --logo-a: #ba8f5d;    /* A Logo Color */
+      --logo-v: #323b1f;    /* V Logo Color */
+      --line: #e2e4db;
+      
+      --serif: "Fraunces", Georgia, serif;
+      --sans: "DM Sans", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: var(--sans);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a { color: inherit; }
+
+    .topbar {
+      width: min(1200px, calc(100% - 64px));
+      height: 82px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-decoration: none;
+      text-transform: uppercase;
+      color: var(--ink);
+    }
+
+    /* Styled to match the AV Logo */
+    .brand-mark {
+      display: inline-flex;
+      font-family: var(--sans);
+      font-size: 28px;
+      font-weight: 800;
+      letter-spacing: -1.5px;
+      line-height: 1;
+    }
+    .brand-mark .a { color: var(--logo-a); }
+    .brand-mark .v { color: var(--logo-v); }
+
+    .top-note {
+      color: var(--muted);
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      width: min(1200px, calc(100% - 64px));
+      min-height: 690px;
+      margin: 0 auto;
+      padding: 58px 0 72px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.04fr) minmax(360px, 0.96fr);
+      align-items: center;
+      gap: clamp(44px, 7vw, 100px);
+    }
+
+    .eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin: 0 0 22px;
+      color: var(--green);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow::before {
+      width: 27px;
+      height: 2px;
+      background: var(--logo-a);
+      content: "";
+    }
+
+    h1 {
+      max-width: 650px;
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(48px, 5.4vw, 76px);
+      font-weight: 600;
+      letter-spacing: 0;
+      line-height: 0.99;
+    }
+
+    h1 em {
+      color: var(--logo-a);
+      font-weight: 500;
+    }
+
+    .intro {
+      max-width: 580px;
+      margin: 24px 0 30px;
+      color: var(--muted);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .intro strong { color: var(--ink); font-weight: 700; }
+
+    .benefits {
+      display: grid;
+      gap: 15px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .benefits li {
+      display: grid;
+      grid-template-columns: 22px 1fr;
+      gap: 11px;
+      align-items: start;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .check {
+      display: grid;
+      width: 21px;
+      aspect-ratio: 1;
+      margin-top: 1px;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--green);
+      color: #fff;
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .benefits strong { color: var(--ink); font-weight: 700; }
+
+    .hero-photo {
+      position: relative;
+      min-height: 540px;
+      overflow: hidden;
+      background: #a8a28d;
+      isolation: isolate;
+    }
+
+    .hero-photo::after {
+      position: absolute;
+      z-index: -1;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 55%, rgb(18 35 27 / 58%));
+      content: "";
+    }
+
+    .hero-photo img {
+      position: absolute;
+      z-index: -2;
+      width: 100%;
+      height: 100%;
+      inset: 0;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .photo-caption {
+      position: absolute;
+      right: 28px;
+      bottom: 25px;
+      left: 28px;
+      color: #fff;
+      font-family: var(--serif);
+      font-size: 24px;
+      line-height: 1.2;
+    }
+
+    .photo-caption span {
+      display: block;
+      margin-bottom: 7px;
+      color: var(--paper);
+      font-family: var(--sans);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .signup {
+      position: relative;
+      overflow: hidden;
+      background: var(--logo-v); /* Using the deep V green for the dark section */
+      color: #fff;
+    }
+
+    .signup::before {
+      position: absolute;
+      top: -180px;
+      right: -110px;
+      width: 470px;
+      aspect-ratio: 1;
+      border: 1px solid rgb(255 255 255 / 14%);
+      border-radius: 50%;
+      box-shadow: 0 0 0 34px rgb(255 255 255 / 3%), 0 0 0 68px rgb(255 255 255 / 3%);
+      content: "";
+      pointer-events: none;
+    }
+
+    .signup-inner {
+      position: relative;
+      width: min(760px, calc(100% - 48px));
+      margin: 0 auto;
+      padding: 75px 0 78px;
+      text-align: center;
+    }
+
+    .signup .eyebrow {
+      justify-content: center;
+      color: var(--brown);
+    }
+
+    .signup h2 {
+      margin: 0;
+      font-family: var(--serif);
+      font-size: clamp(38px, 5vw, 56px);
+      font-weight: 500;
+      letter-spacing: 0;
+      line-height: 1.04;
+    }
+
+    .signup-copy {
+      max-width: 540px;
+      margin: 17px auto 28px;
+      color: rgb(255 255 255 / 78%);
+      font-size: 15px;
+      line-height: 1.6;
+    }
+
+    .signup-form {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      text-align: left;
+    }
+
+    .signup-form label {
+      display: grid;
+      gap: 7px;
+      color: rgb(255 255 255 / 88%);
+      font-size: 12px;
+      font-weight: 600;
+    }
+
+    .signup-form input {
+      width: 100%;
+      min-height: 54px;
+      padding: 0 16px;
+      border: 1px solid rgb(255 255 255 / 24%);
+      border-radius: 2px;
+      outline: none;
+      background: #fff;
+      color: var(--ink);
+      font: 500 15px var(--sans);
+    }
+
+    .signup-form input:focus-visible {
+      outline: 3px solid var(--brown);
+      outline-offset: 2px;
+    }
+
+    .signup-form input::placeholder { color: #7c857e; }
+
+    .signup-form button {
+      grid-column: 1 / -1;
+      min-height: 58px;
+      margin-top: 4px;
+      border: 0;
+      border-radius: 2px;
+      background: var(--brown);
+      color: #fff;
+      cursor: pointer;
+      font: 700 13px var(--sans);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      transition: background 160ms ease, transform 160ms ease;
+    }
+
+    .signup-form button:hover {
+      transform: translateY(-2px);
+      background: var(--logo-a);
+    }
+
+    .signup-form button:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 3px;
+    }
+
+    .trust {
+      margin: 16px 0 0;
+      color: rgb(255 255 255 / 68%);
+      font-size: 12px;
+    }
+
+    footer {
+      padding: 20px 24px;
+      background: var(--logo-v);
+      color: rgb(255 255 255 / 58%);
+      font-size: 11px;
+      text-align: center;
+    }
+
+    @media (max-width: 850px) {
+      .hero {
+        min-height: 0;
+        grid-template-columns: 1fr;
+        gap: 36px;
+        padding: 48px 0 60px;
+      }
+
+      .hero-copy { max-width: 700px; }
+      .hero-photo { min-height: 430px; }
+    }
+
+    @media (max-width: 560px) {
+      .topbar, .hero { width: calc(100% - 40px); }
+      .topbar { height: 68px; }
+      .brand { font-size: 11px; }
+      .top-note { font-size: 10px; }
+      .hero { gap: 30px; padding: 38px 0 48px; }
+      h1 { font-size: clamp(43px, 12vw, 58px); }
+      .intro { margin: 19px 0 24px; font-size: 15px; }
+      .benefits { gap: 13px; }
+      .benefits li { font-size: 13px; }
+      .hero-photo { min-height: 360px; }
+      .photo-caption { right: 20px; bottom: 20px; left: 20px; font-size: 21px; }
+      .signup-inner { padding: 58px 0 62px; }
+      .signup-form { grid-template-columns: 1fr; gap: 14px; }
+      .signup-form button { grid-column: auto; margin-top: 2px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition-duration: 0.01ms !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Aprendo Viviendo, inicio">
+      <!-- Recreated the AV Logo with your specific hex colors -->
+      <span class="brand-mark" aria-hidden="true"><span class="a">A</span><span class="v">V</span></span>
+      <span>Aprendo Viviendo</span>
+    </a>
+    <span class="top-note">Aprendo Viviendo · 50+</span>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="eyebrow">Una forma más sencilla de cuidarte</p>
+        <h1 id="hero-title">La grasa abdominal no se va con dietas. Se va cuando eliminas <em>los 3 venenos.</em></h1>
+        <p class="intro">Descubre cómo perder grasa abdominal después de los 50 sin inyecciones, sin pasar hambre y sin vivir en el gimnasio. <strong>(A mis 49 años, así es como lo hago).</strong></p>
+
+        <ul class="benefits">
+          <li><span class="check" aria-hidden="true">✓</span><span><strong>El Reinicio de 3 Días:</strong> El plan exacto para empezar a desinflamar tu cuerpo hoy mismo.</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span><strong>Las 5 recetas “perezosas” en Air Fryer:</strong> Comida real, deliciosa y lista en menos de 20 minutos (sin harinas, ni azúcar, ni aceites refinados).</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span><strong>La Regla de los 15 Minutos:</strong> Cómo entrenar fuerza en casa (con equipo mínimo) sin convertirte en un adicto al gimnasio.</span></li>
+          <li><span class="check" aria-hidden="true">✓</span><span><strong>El secreto del Ayuno y el Café Negro:</strong> Cómo acelerar tu metabolismo sin contar calorías.</span></li>
+        </ul>
+      </div>
+
+      <div class="hero-photo">
+        <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&amp;fit=crop&amp;w=1200&amp;q=85" alt="Preparación de comida casera en una cocina luminosa" fetchpriority="high">
+        <div class="photo-caption"><span>Hábitos que caben en tu vida</span>Menos complicaciones. Más bienestar.</div>
+      </div>
+    </section>
+
+    <section class="signup" id="guia" aria-labelledby="signup-title">
+      <div class="signup-inner">
+        <p class="eyebrow">Tu próximo paso empieza aquí</p>
+        <h2 id="signup-title">Recibe tu guía gratis</h2>
+        <p class="signup-copy">Escribe tu nombre y tu mejor correo electrónico abajo para recibir el PDF gratuito ahora mismo.</p>
+
+        <!-- Conecta el formulario a tu plataforma de email marketing antes de publicar. -->
+        <form class="signup-form" method="post">
+          <label for="first-name">Nombre
+            <input id="first-name" name="first_name" type="text" autocomplete="given-name" placeholder="Tu nombre" required>
+          </label>
+          <label for="email">Correo Electrónico
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+          </label>
+          <button type="submit">Sí, quiero mi guía gratis</button>
+        </form>
+        <p class="trust">100% gratis. Cero spam. Solo información real para transformar tu salud.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>© 2026 Aprendo Viviendo</footer>
+</body>
+</html>
