@@ -1,0 +1,96 @@
+:root {
+  color-scheme: light;
+  --background: #fefefe;
+  --text: #323b1f;
+  --green: #668541;
+  --brown: #bb8f60;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: grid;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px 24px;
+  place-items: center;
+  background: var(--background);
+  color: var(--text);
+  font-family: system-ui, sans-serif;
+  text-align: center;
+}
+
+.profile {
+  width: min(100%, 520px);
+  margin: auto;
+}
+
+.logo {
+  display: block;
+  width: 144px;
+  height: 144px;
+  margin: 0 auto 24px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+h1 {
+  margin: 0;
+  font-family: Georgia, serif;
+  font-size: clamp(2.5rem, 9vw, 3.5rem);
+  font-weight: 500;
+  line-height: 1.1;
+}
+
+.subtitle {
+  margin: 12px 0 30px;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.links {
+  display: grid;
+  gap: 12px;
+}
+
+.link-button {
+  display: block;
+  width: 100%;
+  padding: 15px 20px;
+  border-radius: 4px;
+  background: var(--green);
+  color: #fff;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.4;
+  text-decoration: none;
+  transition: background-color 150ms ease;
+}
+
+.link-button:hover,
+.link-button:focus-visible {
+  background: var(--brown);
+}
+
+.link-button:focus-visible {
+  outline: 3px solid var(--text);
+  outline-offset: 3px;
+}
+
+footer {
+  margin-top: 40px;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 32px 18px 20px;
+  }
+
+  .logo {
+    width: 128px;
+    height: 128px;
+  }
+}
