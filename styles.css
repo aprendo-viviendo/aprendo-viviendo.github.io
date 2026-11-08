@@ -1,0 +1,100 @@
+/* Global CSS Resets and Defaults */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  line-height: 1.6;
+}
+
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button, input, optgroup, select, textarea {
+  font-family: inherit;
+}
+
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+a {
+  color: inherit;
+  text-decoration: inherit;
+}
+
+/* Global Site Footer */
+.site-footer {
+  background: #fefefe;
+  border-top: 1px solid #e2e4db;
+  color: #6b7264;
+  font-family: Helvetica, Arial, sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+  margin-top: auto;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-brand {
+  margin: 0 0 20px;
+  font-family: Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #323b1f;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+  margin: 0 0 20px;
+}
+
+.footer-links a {
+  color: #668541;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 150ms ease;
+}
+
+.footer-links a:hover,
+.footer-links a:focus-visible {
+  color: #bb8f60;
+}
+
+.footer-links a:focus-visible {
+  outline: 2px solid #323b1f;
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.footer-copy {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #9a9c96;
+}
+
+@media (max-width: 480px) {
+  .site-footer {
+    padding: 32px 16px;
+  }
+
+  .footer-links {
+    gap: 16px;
+    font-size: 0.95rem;
+  }
+}
