@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#fefefe">
-  <meta name="description" content="Descarga El Reinicio de 3 Días: Una guía gratuita para perder grasa abdominal después de los 50 sin inyecciones, pasarhambre ni vivir en el gimnasio.">
+  <meta name="description" content="Descarga El Reinicio de 3 Días: Una guía gratuita para perder grasa abdominal después de los 50 sin inyecciones, pasar hambre ni vivir en el gimnasio.">
   <meta name="robots" content="noindex, nofollow">
   <title>El Reinicio de 3 Días | Aprendo Viviendo</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
 </head>
 <body>
   <header class="topbar">
-    <a class="brand" href="#inicio" aria-label="Aprendo Viviendo, inicio">
+    <a class="brand" href="/" aria-label="Aprendo Viviendo, inicio">
       <img class="brand-logo" src="/assets/logo.svg" width="40" height="40" alt="Aprendo Viviendo Logo">
       <span>Aprendo Viviendo</span>
     </a>
@@ -61,18 +61,22 @@
         <h2 id="signup-title">Recibe tu guía gratis</h2>
         <p class="signup-copy">Escribe tu nombre y tu mejor correo electrónico abajo para recibir tu guía El Reinicio de 3 Días ahora mismo.</p>
 
-        <form action="https://aprendoviviendo.us8.list-manage.com/subscribe/post?u=6a9b9236196adb383d9d0993a&amp;id=2abc946734&amp;f_id=00081fe1f0" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="signup-form" target="_blank" rel="noopener" novalidate>
-          <label for="mce-FNAME">Nombre
-            <input id="mce-FNAME" name="FNAME" type="text" autocomplete="given-name" placeholder="Tu nombre">
+        <form id="loops-form" class="signup-form">
+          <label for="firstName">Nombre
+            <input id="firstName" name="firstName" type="text" autocomplete="given-name" placeholder="Tu nombre" required>
           </label>
-          <label for="mce-LNAME">Apellido
-            <input id="mce-LNAME" name="LNAME" type="text" autocomplete="family-name" placeholder="Tu apellido">
+          <label for="lastName">Apellido
+            <input id="lastName" name="lastName" type="text" autocomplete="family-name" placeholder="Tu apellido" required>
           </label>
-          <label class="full-width" for="mce-EMAIL">Correo Electrónico *
-            <input id="mce-EMAIL" name="EMAIL" type="email" autocomplete="email" placeholder="tu@correo.com" required>
+          <label class="full-width" for="email">Correo Electrónico *
+            <input id="email" name="email" type="email" autocomplete="email" placeholder="tu@correo.com" required>
           </label>
-          <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_6a9b9236196adb383d9d0993a_2abc946734" tabindex="-1" value=""></div>
-          <button type="submit" name="subscribe" id="mc-embedded-subscribe">Sí, quiero mi Reinicio de 3 Días</button>
+          
+          <!-- IMPORTANT: Replace this value with your actual Loops Mailing List ID -->
+          <input type="hidden" name="mailingLists" value="cmwevjjm6kmm10jzv045dduwr">
+          
+          <button id="loops-submit-btn" type="submit">Sí, quiero mi Reinicio de 3 Días</button>
+          <p id="form-message" style="display: none; margin-top: 15px; font-weight: bold; text-align: center;"></p>
         </form>
         <p class="trust">100% gratis. Cero spam. Solo información real para transformar tu salud.</p>
       </div>
@@ -91,5 +95,7 @@
       <p class="footer-copy">&copy; 2026 Aprendo Viviendo. Todos los derechos reservados.</p>
     </div>
   </footer>
+  
+  <script src="script.js"></script>
 </body>
 </html>
