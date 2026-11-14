@@ -4,6 +4,9 @@
   --text: #323b1f;
   --green: #668541;
   --brown: #bb8f60;
+  --line: #e2e4db;
+  --serif: "Fraunces", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
 }
 
 * {
@@ -14,83 +17,174 @@ body {
   display: grid;
   min-height: 100vh;
   margin: 0;
-  padding: 40px 20px 24px;
+  padding: 48px 20px 24px;
   place-items: center;
   background: var(--background);
   color: var(--text);
-  font-family: system-ui, sans-serif;
+  font-family: var(--sans);
   text-align: center;
+  -webkit-font-smoothing: antialiased;
 }
 
 .profile {
-  width: min(100%, 520px);
+  width: min(100%, 480px); /* Slightly narrower for better mobile feel */
   margin: auto;
+}
+
+.profile-header {
+  margin-bottom: 24px;
 }
 
 .logo {
   display: block;
-  width: 144px;
-  height: 144px;
-  margin: 0 auto 24px;
+  width: 110px;
+  height: 110px;
+  margin: 0 auto 16px;
   border-radius: 50%;
-  object-fit: cover;
+  object-fit: contain;
+  border: 2px solid var(--line); /* Subtle border like the inspiration */
+  background-color: #fff;
+  padding: 8px;
 }
 
 h1 {
   margin: 0;
-  font-family: Georgia, serif;
-  font-size: clamp(2.5rem, 9vw, 3.5rem);
-  font-weight: 500;
+  font-family: var(--serif);
+  font-size: clamp(2rem, 8vw, 2.75rem);
+  font-weight: 600;
   line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .subtitle {
-  margin: 12px 0 30px;
-  font-size: 1rem;
+  margin: 8px 0 20px;
+  font-size: 1.05rem;
+  color: #5e6962;
   line-height: 1.5;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 32px;
+}
+
+.social-icon {
+  display: flex;
+  width: 48px;
+  height: 48px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: #f4f4f0;
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+.social-icon:hover {
+  transform: translateY(-2px);
+  background-color: #e9e9e2;
+}
+
+.social-icon:focus-visible {
+  outline: 3px solid var(--green);
+  outline-offset: 3px;
+}
+
+.social-icon svg {
+  width: 22px;
+  height: 22px;
 }
 
 .links {
   display: grid;
-  gap: 12px;
+  gap: 16px;
 }
 
 .link-button {
   display: block;
   width: 100%;
-  padding: 15px 20px;
-  border-radius: 4px;
+  padding: 18px 20px;
+  border: 2px solid transparent;
+  border-radius: 12px; /* Rounded rectangles, not pills */
   background: var(--green);
   color: #fff;
   font-size: 1rem;
   font-weight: 700;
   line-height: 1.4;
   text-decoration: none;
-  transition: background-color 150ms ease;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  transition: background-color 150ms ease, transform 150ms ease, box-shadow 150ms ease;
 }
 
 .link-button:hover,
 .link-button:focus-visible {
-  background: var(--brown);
+  transform: translateY(-2px);
+  background: #567235; /* Darker green on hover */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Primary Button (Free PDF) - Dark Green to stand out */
+.link-button-primary {
+  background: var(--text);
+  border-color: var(--text);
+}
+
+.link-button-primary:hover,
+.link-button-primary:focus-visible {
+  background: #1d2312; /* Even darker on hover */
 }
 
 .link-button:focus-visible {
-  outline: 3px solid var(--text);
+  outline: 3px solid var(--green);
   outline-offset: 3px;
 }
 
 footer {
-  margin-top: 40px;
+  margin-top: 48px;
   font-size: 0.875rem;
+  color: #5e6962;
+}
+
+.footer-brand {
+  font-family: var(--serif);
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 12px;
+}
+
+.footer-links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.footer-links a {
+  color: var(--green);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.footer-copy {
+  font-size: 0.75rem;
+  color: #8c9488;
 }
 
 @media (max-width: 480px) {
   body {
-    padding: 32px 18px 20px;
+    padding: 32px 16px 20px;
   }
-
-  .logo {
-    width: 128px;
-    height: 128px;
+  .link-button {
+    padding: 16px;
+    font-size: 0.95rem;
   }
 }
