@@ -26,8 +26,17 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+.hero-banner-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
 .profile {
-  width: min(100%, 480px); /* Slightly narrower for better mobile feel */
+  width: min(100%, 480px);
   margin: auto;
 }
 
@@ -39,12 +48,13 @@ body {
   display: block;
   width: 110px;
   height: 110px;
-  margin: 0 auto 16px;
+  margin: 0 auto 28px;
   border-radius: 50%;
   object-fit: contain;
-  border: 2px solid var(--line); /* Subtle border like the inspiration */
-  background-color: #fff;
-  padding: 8px;
+  transform: scale(1.4);
+  padding: 0;
+  border: none;
+  background-color: transparent;
 }
 
 h1 {
@@ -115,7 +125,7 @@ h1 {
   width: 100%;
   padding: 18px 20px;
   border: 2px solid transparent;
-  border-radius: 12px; /* Rounded rectangles, not pills */
+  border-radius: 12px;
   background: var(--green);
   color: #fff;
   font-size: 1rem;
@@ -129,11 +139,10 @@ h1 {
 .link-button:hover,
 .link-button:focus-visible {
   transform: translateY(-2px);
-  background: #567235; /* Darker green on hover */
+  background: #567235;
   box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-/* Primary Button (Free PDF) - Dark Green to stand out */
 .link-button-primary {
   background: var(--text);
   border-color: var(--text);
@@ -141,7 +150,7 @@ h1 {
 
 .link-button-primary:hover,
 .link-button-primary:focus-visible {
-  background: #1d2312; /* Even darker on hover */
+  background: #1d2312;
 }
 
 .link-button:focus-visible {
